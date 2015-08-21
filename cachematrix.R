@@ -1,5 +1,4 @@
 ## In the beginning inv is a 1 by 1 matrix that contains only one value (NA)
-## It will be rewritten by the inverse matrix of x
 ## It will be overwritten by the inverse matrix of x
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -26,7 +25,7 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
   inv <- x$getinv()
-  if(!is.na(inv[1,1])) {
+  if(!is.na(inv[1,1])) { 
   inv <- x$getinv() ## gets the inverse
   if(!is.na(inv[1,1])) { ## checks if the first entry is NA
     message("getting cached data")
